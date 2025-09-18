@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education - Jillian Ireland Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body, html {
+      height: 100%;
+      background-color: #0E114C; /* Dark blue background */
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: rgba(14, 17, 76, 0.85);
+      z-index: 10;
+      user-select: none;
+      color: #d1d1d1;
+    }
+
+    .logo-container {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: float 4s ease-in-out infinite;
+      color: #2c3e50;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .initial-J {
+      font-size: 20px;
+      margin-bottom: -4px;
+      line-height: 1;
+    }
+
+    .initial-I {
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      color: #d1d1d1;
+      margin-left: 0.5rem;
+    }
+
+    nav {
+      background-color: #f0f9f3;
+      border-radius: 8px;
+      display: flex;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 0.7rem 1.3rem;
+      color: #04402e;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover:not(.active) {
+      background-color: #04402e;
+      color: #f0f9f3;
+    }
+
+    nav a.active {
+      background-color: #0a8e63;
+      color: #f0f9f3;
+      font-weight: 700;
+    }
+
+    /* Main body */
+    main {
+      padding: 6rem 2rem 4rem; /* add padding top to avoid overlap with fixed header */
+      min-height: calc(100vh - 120px); /* leave space for footer */
+      background-color: #132060; /* Slightly lighter blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .footer-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  max-height: 250px;   /* match footer min-height */
+  background-color: rgba(14, 17, 76, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.footer-section {
+  position: relative;
+  min-height: 250px;
+  height: 250px; /* fix the height */
+  overflow: hidden;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  gap: 2rem;
+  margin-bottom: 1.5rem; /* space between content and copyright */
+}
+
+.footer-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+  font-size: 1rem;
+}
+
+.social-links div {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.social-links a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0a8e63;
+}
+
+.footer-copyright p {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  margin: 0;
+  user-select: none;
+  text-align: center;
+}
+
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="logo" aria-label="Jillian Ireland logo" style="display: flex; align-items: center;">
+      <div class="logo-container" aria-hidden="true">
+        <div class="initial-J">J</div>
+        <div class="initial-I">I</div>
+      </div>
+      <div class="logo-text">Jillian Ireland</div>
+    </div>
+
+    <nav role="navigation" aria-label="Primary Navigation">
+      <a href="index.html">Home</a>
+      <a href="education.html" class="active" aria-current="page">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main role="main" aria-label="Education content">
+    <!-- Content will go here -->
+    <p>This is the Education page content area.</p>
+  </main>
+
+ <footer class="footer-section">
+  <div class="footer-video-container" aria-hidden="true">
+    <video autoplay muted loop playsinline>
+      <source src="BackgroundVideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="footer-overlay">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Email</h3>
+        <p>jireland1@stetson.edu</p>
+      </div>
+      <div class="social-links">
+        <h3>Follow</h3>
+        <div>
+          <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Personal website"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright below the footer-content -->
+    <div class="footer-copyright">
+      <p>© 2025 Jillian Ireland. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
