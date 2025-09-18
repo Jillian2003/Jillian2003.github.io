@@ -104,6 +104,7 @@
 
     /* Main body */
     main {
+      padding-top: 6rem;
       padding: 6rem 2rem 4rem; /* add padding top to avoid overlap with fixed header */
       min-height: calc(100vh - 120px); /* leave space for footer */
       background-color: #132060; /* Slightly lighter blue */
@@ -184,10 +185,67 @@
   text-align: center;
 }
 
+  .wave-banner {
+  position: relative;
+  background-color: #0a8e63; /* The blue background */
+    background-image: url('https://www2.stetson.edu/today/wp-content/uploads/2021/05/Brown-Hall-optimized.jpg');
+  color: white;
+  overflow: hidden;
+  padding: 4rem 1rem 6rem; /* bottom padding so text is away from wave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.wave-content {
+  max-width: 900px;
+  width: 90%;
+  background-color: rgba(14,17,76,0.7);
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 3rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(14,17,76,0.7);
+  z-index: 2;
+  position: relative;
+}
+
+.wave-content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* The wavy SVG at the bottom */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 1;
+  display: block;
+}
+
+/* Responsive font size */
+@media (max-width: 600px) {
+  .wave-content h1 {
+    font-size: 2rem;
+  }
+  .wave-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
   </style>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
 </head>
 <body>
 
@@ -208,11 +266,37 @@
     </nav>
   </header>
 
+ <section class="wave-banner" aria-label="Education and Campus Involvement banner">
+  <div class="wave-content">
+    <h1>Education &amp; Campus Involvement</h1>
+  </div>
+  <svg class="wave-divider" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path fill="#0E114C" d="M0,100 C480,200 960,0 1440,100 L1440,150 L0,150 Z"></path>
+  </svg>
+</section>
+
+
   <main role="main" aria-label="Education content" style="padding: 6rem 2rem 4rem; min-height: calc(100vh - 120px); background-color: #132060; color: #fff; text-align: center;">
   <section aria-labelledby="education-title" style="max-width: 800px; margin: 0 auto; padding: 2rem; text-align: left;">
-    <h2 id="education-title" style="font-weight: 700; font-size: 2rem; color: #0a8e63; margin-bottom: 1.5rem;">
-      Education
-    </h2>
+   <h2 id="education-title" 
+    style="
+      font-weight: 700; 
+      font-size: 2rem; 
+      color: #ffffff; 
+      margin-bottom: 1.5rem; 
+      border: 2px solid #ffffff; 
+      padding: 0.5rem 1rem; 
+      border-radius: 8px;
+      max-width: 1000px; 
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      text-align: center;
+    ">
+  Education
+</h2>
+
 
     <div style="background-color: rgba(14, 17, 76, 0.7); padding: 2rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
       <img src="stetson-logo.png" alt="Stetson University Logo" style="width: 100px; height: auto; flex-shrink: 0;" />
@@ -235,9 +319,25 @@
       </div>
     </div>
 
-    <h2 style="font-weight: 700; font-size: 2rem; color: #0a8e63; margin: 3rem 0 1.5rem;">
-      Campus Involvement
-    </h2>
+    <h2 id="campus-involvement-title" 
+    style="
+      font-weight: 700; 
+      font-size: 2rem; 
+      color: #ffffff; 
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; 
+      border: 2px solid #ffffff; 
+      padding: 0.5rem 1rem; 
+      border-radius: 8px;
+      max-width: 1000px; 
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      text-align: center;
+    ">
+  Campus Involvement
+</h2>
 
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
       <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; flex: 1 1 300px; text-align: left;">
@@ -265,6 +365,13 @@
   </section>
   </main>
 
+  
+  
+  
+  
+  
+  
+  
  <footer class="footer-section">
   <div class="footer-video-container" aria-hidden="true">
     <video autoplay muted loop playsinline>
@@ -295,6 +402,10 @@
     </div>
   </div>
 </footer>
+
+
+</body>
+</html>
 
 
 </body>
