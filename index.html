@@ -16,7 +16,7 @@
     /* Full screen background with gradient overlay for readability */
     body, html {
       height: 100%;
-      background:   url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background: #0a1c40;
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -24,7 +24,7 @@
     }
 
     /* Overlay gradient for better contrast over the background */
-    body::before {
+   body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -178,11 +178,41 @@
         font-size: 1.6rem;
       }
       
-      
+
+      /* NEW: Video container styles */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2; /* Set to -2 to be behind the gradient overlay */
+    }
+
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     }
   </style>
 </head>
 <body>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="BackgroundVideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
   <header>
     <div class="logo" aria-label="Jillian Ireland logo">
   <div class="logo-container" aria-hidden="true">
@@ -199,6 +229,7 @@
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
     </nav>
+
   </header>
   <main>
     <div class="welcome-card" role="region" aria-label="Welcome message">
