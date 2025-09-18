@@ -55,45 +55,57 @@
       user-select: none;
       color: #d1d1d1;
     }
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* space between circle and text */
+  margin-bottom: 1rem
+}
 
-    .logo-container {
-      width: 40px;
-      height: 40px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: float 4s ease-in-out infinite;
-      color: #2c3e50;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+.logo-container {
+  width: 80px;   /* larger circle */
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
+.initial-J,
+.initial-I {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
 
-    .initial-J {
-      font-size: 20px;
-      margin-bottom: -4px;
-      line-height: 1;
-    }
+.initial-J {
+  font-size: 30px;   /* bigger J */
+  margin-bottom: -4px;
+}
 
-    .initial-I {
-      font-size: 12px;
-      line-height: 1;
-    }
+.initial-I {
+  font-size: 22px;   /* bigger I */
+}
 
-    .logo-text {
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-align: center;
-      color: #d1d1d1;
-    }
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f9f3;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
     /* Navigation */
     nav {
@@ -320,13 +332,13 @@
   </div>
 
   <header>
-    <div class="logo" aria-label="Jillian Ireland logo">
-      <div class="logo-container" aria-hidden="true">
-        <div class="initial-J">J</div>
-        <div class="initial-I">I</div>
-      </div>
-      <div class="logo-text">Jillian Ireland</div>
-    </div>
+      <div class="logo" aria-label="Jillian Ireland logo">
+  <div class="logo-container" aria-hidden="true">
+    <div class="initial-J">J</div>
+    <div class="initial-I">I</div>
+  </div>
+  <div class="logo-text">Jillian Ireland</div>
+</div>
 
     <nav role="navigation" aria-label="Primary Navigation">
       <a href="index.html" class="active" aria-current="page">Home</a>
