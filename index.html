@@ -18,7 +18,7 @@
       height: 100%;
       background: #0a1c40;
       background-size: cover;
-      color: #fff;
+      color: #111;
       overflow-x: hidden;
       position: relative;
     }
@@ -51,6 +51,7 @@
       height: auto;
       transform: translate(-50%, -50%);
       object-fit: cover;
+      filter: brightness(0.75);
     }
 
     /* Header */
@@ -64,8 +65,9 @@
       justify-content: space-between;
       padding: 1rem 2rem;
       background-color: rgba(14, 17, 76, 0.85);
-      z-index: 10; /* high z-index so above video and overlays */
+      z-index: 10;
       user-select: none;
+      color: #d1d1d1;
     }
 
     .logo {
@@ -73,7 +75,6 @@
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
-      color: #d1d1d1;
     }
 
     .logo-container {
@@ -112,6 +113,7 @@
       font-size: 0.9rem;
       font-weight: 500;
       text-align: center;
+      color: #d1d1d1;
     }
 
     /* Navigation */
@@ -145,34 +147,44 @@
 
     /* Main container for typing card */
     main {
-      height: 100vh; /* full screen height */
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      z-index: 5; /* above video */
+      z-index: 5;
       padding: 2rem;
       user-select: none;
       text-align: center;
     }
 
+    /* Card styles */
+    .typing-card {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      max-width: 380px;
+      width: 90%;
+      color: #111;
+    }
+
     /* Typing effect styles */
     h1 {
-      font-size: 2.5em;
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #f0f9f3;
-      text-shadow: 1px 1px 5px #0008;
+      color: #222;
     }
 
     #text {
-      font-size: 3.8em;
-      border-right: 2px solid #f0f9f3;
+      font-size: 2.6rem;
+      border-right: 2px solid #111;
       white-space: nowrap;
       overflow: hidden;
       width: 0;
-      color: #d1d1d1;
-      text-shadow: 1px 1px 8px #000c;
+      color: #444;
       animation: blink 0.75s step-end infinite;
+      font-weight: 600;
     }
 
     /* Blinking cursor */
@@ -190,10 +202,14 @@
         padding: 0.5rem 1rem;
       }
       h1 {
-        font-size: 1.8em;
+        font-size: 1.6rem;
       }
       #text {
-        font-size: 2.5em;
+        font-size: 1.8rem;
+      }
+      .typing-card {
+        padding: 1.5rem 2rem;
+        max-width: 90%;
       }
     }
   </style>
@@ -228,8 +244,10 @@
   </header>
 
   <main role="main" aria-label="Welcome message">
-    <h1>Hi there</h1>
-    <div id="text"></div>
+    <div class="typing-card">
+      <h1>Hi there</h1>
+      <div id="text"></div>
+    </div>
   </main>
 
   <script>
@@ -282,5 +300,4 @@
 
 </body>
 </html>
-
 
