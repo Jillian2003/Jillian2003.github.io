@@ -1,13 +1,204 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
 <head>
-  <title> Jillian Ireland </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jillian Ireland Portfolio</title>
   <style>
+    /* Reset margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Full screen background with gradient overlay for readability */
+    body, html {
+      height: 100%;
+      background:   url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    /* Overlay gradient for better contrast over the background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(120deg, #0a1c40, #091e49);
+      mix-blend-mode: multiply;
+      z-index: -1;
+    }
+
+    /* Header container */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #0E114C;
+    }
+
+    /* Logo circle with initial */
     
+    .logo-container {
+  width: 40px; /* adjust size to fit header */
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: float 4s ease-in-out infinite;
+  margin-right: 0.8rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.initial-J, .initial-I {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+  user-select: none;
+}
+
+.initial-J {
+  font-size: 20px;
+  margin-bottom: -4px;
+}
+
+.initial-I {
+  font-size: 12px;
+}
+
+.logo-text {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+    /* Navigation bar */
+    nav {
+      background-color: #f0f9f3;
+      border-radius: 8px;
+      overflow: hidden;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 0.7rem 1.3rem;
+      color: #04402e;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 6px;
+    }
+
+    nav a:hover:not(.active) {
+      background-color: #04402e;
+      color: #f0f9f3;
+    }
+
+    nav a.active {
+      background-color: #0a8e63;
+      color: #f0f9f3;
+      font-weight: 700;
+    }
+
+    /* Main hero container centered content */
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Welcome card */
+    .welcome-card {
+      background-color: #f6f6f6;
+      color: #111;
+      padding: 1.5rem 3rem;
+      border: 3px solid #04402e;
+      max-width: 320px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .welcome-card h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      font-size: 2.2rem;
+    }
+
+    .welcome-card p {
+      font-weight: 400;
+      letter-spacing: 1.1px;
+      font-size: 1rem;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 480px) {
+      nav {
+        font-size: 0.8rem;
+        gap: 4px;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+      }
+
+      .welcome-card {
+        padding: 1rem 1.5rem;
+        max-width: 90%;
+      }
+
+      .welcome-card h1 {
+        font-size: 1.6rem;
+      }
+      
+      
+    }
   </style>
 </head>
 <body>
-  <h1> I am Jill </h1>
+  <header>
+    <div class="logo" aria-label="Jillian Ireland logo">
+  <div class="logo-container" aria-hidden="true">
+    <div class="initial-J">J</div>
+    <div class="initial-I">I</div>
+  </div>
+  <div class="logo-text">Jillian Ireland</div>
+</div>
+    
+    
+    <nav role="navigation" aria-label="Primary Navigation">
+      <a href="#home" class="active" aria-current="page">Home</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+  <main>
+    <div class="welcome-card" role="region" aria-label="Welcome message">
+      <h1>Hi there</h1>
+      <p>Welcome to my Website!</p>
+    </div>
+  </main>
 </body>
 </html>
