@@ -13,7 +13,7 @@
       font-family: 'Courier New', Courier, monospace;
     }
 
-    /* Full screen background with gradient overlay for readability */
+    /* Full screen background base */
     body, html {
       height: 100%;
       background: #0a1c40;
@@ -23,14 +23,37 @@
       color: #fff;
     }
 
-    /* Overlay gradient for better contrast over the background */
-   body::before {
+    /* Overlay gradient for better contrast */
+    body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background: linear-gradient(120deg, #0a1c40, #091e49);
       mix-blend-mode: multiply;
       z-index: -1;
+    }
+
+    /* Video background container */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2; /* Behind the overlay */
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
     }
 
     /* Header container */
@@ -40,59 +63,58 @@
       justify-content: space-between;
       padding: 1rem 2rem;
       background-color: #0E114C;
+      z-index: 1; /* Above video and overlay */
     }
 
-    /* Logo circle with initial */
-   .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-}
+    /* Logo container and text stacked vertically */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      user-select: none;
+    }
 
-.logo-container {
-  width: 40px;
-  height: 40px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: float 4s ease-in-out infinite;
-}
+    .logo-container {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: float 4s ease-in-out infinite;
+    }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
 
-.initial-J, .initial-I {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #2c3e50;
-  line-height: 1;
-  user-select: none;
-}
+    .initial-J, .initial-I {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #2c3e50;
+      line-height: 1;
+    }
 
-.initial-J {
-  font-size: 20px;
-  margin-bottom: -4px;
-}
+    .initial-J {
+      font-size: 20px;
+      margin-bottom: -4px;
+    }
 
-.initial-I {
-  font-size: 12px;
-}
+    .initial-I {
+      font-size: 12px;
+    }
 
-.logo-text {
-  color: #d1d1d1;
-  font-size: 0.9rem;
-  font-weight: 500;
-  user-select: none;
-  text-align: center;
-}
-
+    .logo-text {
+      color: #d1d1d1;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
 
     /* Navigation bar */
     nav {
@@ -132,6 +154,7 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
+      z-index: 1; /* Above video and overlay */
     }
 
     /* Welcome card */
@@ -177,65 +200,45 @@
       .welcome-card h1 {
         font-size: 1.6rem;
       }
-      
-
-      /* NEW: Video container styles */
-    .video-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -2; /* Set to -2 to be behind the gradient overlay */
-    }
-
-    .video-container video {
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
     }
   </style>
+
+  <!-- Google Fonts for Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="video-container">
+  <div class="video-container" aria-hidden="true">
     <video autoplay muted loop playsinline>
-      <source src="BackgroundVideo.mp4" type="video/mp4">
+      <source src="BackgroundVideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  
+
   <header>
     <div class="logo" aria-label="Jillian Ireland logo">
-  <div class="logo-container" aria-hidden="true">
-    <div class="initial-J">J</div>
-    <div class="initial-I">I</div>
-  </div>
-  <div class="logo-text">Jillian Ireland</div>
-</div>
-    
-    
+      <div class="logo-container">
+        <div class="initial-J">J</div>
+        <div class="initial-I">I</div>
+      </div>
+      <div class="logo-text">Jillian Ireland</div>
+    </div>
+
     <nav role="navigation" aria-label="Primary Navigation">
       <a href="#home" class="active" aria-current="page">Home</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
     </nav>
-
   </header>
+
   <main>
     <div class="welcome-card" role="region" aria-label="Welcome message">
       <h1>Hi there</h1>
       <p>Welcome to my Website!</p>
     </div>
   </main>
+
 </body>
 </html>
+
