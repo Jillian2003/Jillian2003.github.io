@@ -317,26 +317,31 @@
     </div>
 
    <h2 id="campus-involvement-title" 
-    style="
-    font-weight: 700; 
-    font-size: 2rem; 
-    color: #ffffff; 
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem; 
-    border: 3px solid #ffffff; 
-    padding: 0.5rem 2rem; /* increased horizontal padding */
-    border-radius: 10px 10px 0 0; /* optional: rounded corners on top only */
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    ">
-  Campus Involvement
-</h2>
-   
+      style="
+      font-weight: 700; 
+      font-size: 2rem; 
+      color: #ffffff; 
+      margin-top: 3rem;
+      margin-bottom: 1.5rem; 
+      border: 3px solid #ffffff; 
+      padding: 0.5rem 2rem; /* increased horizontal padding */
+      border-radius: 10px 10px 0 0; /* optional: rounded corners on top only */
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      ">
+    Campus Involvement
+    </h2>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <div style="
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 2rem; 
+      max-width: 100%; /* fill width of section */
+      margin: 0 auto;
+      ">
       
-      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; flex: 1 1 300px; text-align: left;">
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
         <img src="logos/wise-logo.png" alt="WISE Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
         <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
           WISE Programming Lead
@@ -347,7 +352,7 @@
         </p>
       </div>
 
-      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; flex: 1 1 300px; text-align: left;">
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
         <img src="logos/summer-conference-assistant.png" alt="Summer Conference Assistant Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
         <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
           Summer Conference Assistant
@@ -358,9 +363,8 @@
         </p>
       </div>
 
-
-      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; flex: 1 1 300px; text-align: left;">
-        <img src="logos/sga-logo.png" alt="SGA Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/sga-logo.jpeg" alt="SGA Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
         <h4 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
           Student Government Association School of Business Senator
         </h4>
@@ -370,8 +374,8 @@
         </p>
       </div>
       
-      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 350px; flex: 1 1 300px; text-align: left;">
-        <img src="logos/bonner-logo.png" alt="Bonner Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/bonner-logo.jpeg" alt="Bonner Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
         <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
           Bonner Student Leader
         </h3>
@@ -380,11 +384,77 @@
           Oversee student volunteers across nonprofit partnerships, managing engagement data and leading team meetings to improve program planning and increase retention by 15 percent.
         </p>
       </div>
+
+<!-- Affiliations Section -->
+    <h2 id="affiliations-title" 
+      style="
+      font-weight: 700; 
+      font-size: 2rem; 
+      color: #ffffff; 
+      margin-top: 3rem;
+      margin-bottom: 1.5rem; 
+      border: 3px solid #ffffff; 
+      padding: 0.5rem 2rem; /* increased horizontal padding */
+      border-radius: 10px 10px 0 0; /* optional: rounded corners on top only */
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      ">
+    Affiliations
+    </h2>
+
+    <div style="
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 2rem; 
+      max-width: 100%; /* fill width of section */
+      margin: 0 auto;
+      ">
       
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/nscs.jpg" alt="NSCS logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+        <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
+          National Society of Colliegiate Scholors
+        </h3>
+        <p style="font-size: 1rem; color: #ccc;">
+         The National Society of Collegiate Scholars (NSCS) is a non-profit honor society that recognizes high-achieving first-and second-year college students.
+        </p>
+      </div>
+
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/ptk-logo.png" alt="PTK Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+        <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
+          Phi Theta Kappa Honors Society
+        </h3>
+        <p style="font-size: 1rem; color: #ccc;">
+          Phi Theta Kappa's nonprofit mission is to recognize and promote student academic achievement. 
+        </p>
+      </div>
+
+       <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/wic-logo.jpeg" alt="WIC Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+        <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
+          Women in Cybersecurity
+        </h3>
+        <p style="font-size: 1rem; color: #ccc;">
+          WiCyS is where the recruitment, retention and advanc
+        </p>
+      </div>
+
+      <div style="background-color: rgba(14, 17, 76, 0.7); padding: 1.5rem; border-radius: 10px; border: 1px solid #0a8e63; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; width: 100%;">
+        <img src="logos/init-logo.jpeg" alt="WIC Logo" style="width: 120px; height: auto; margin-bottom: 1rem;" />
+        <h3 style="font-weight: 700; color: #d1d1d1; margin-bottom: 0.5rem;">
+          INIT
+        </h3>
+        <p style="font-size: 1rem; color: #ccc;">
+          A nonprofit empowering underserved communities to start careers in tech
+        </p>
+      </div>
     </div>
   </section>
   </main>
-  
+
+  <!--Footer-->
  <footer class="footer-section">
   <div class="footer-video-container" aria-hidden="true">
     <video autoplay muted loop playsinline>
