@@ -235,45 +235,33 @@
       }
     }
     /* --- Footer Section --- */
-.footer-section {
-  position: relative; /* This is crucial for positioning the video correctly */
-  min-height: 250px; /* Adjust this value to change the footer's height */
+ .footer-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  max-height: 250px;   /* match footer min-height */
+  background-color: rgba(14, 17, 76, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  padding: 2rem;
+  box-sizing: border-box;
   overflow: hidden;
-  z-index: 2; /* Ensures it sits above the main content */
+}
+.footer-section {
+  position: relative;
+  min-height: 250px;
+  height: 250px; /* fix the height */
+  overflow: hidden;
+  z-index: 2;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer-video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.footer-video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-}
-
-.footer-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(14, 17, 76, 0.5); /* Semi-transparent blue */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3; /* On top of the video */
-  padding: 2rem;
-}
 
 .footer-content {
   display: flex;
@@ -281,6 +269,7 @@
   width: 100%;
   max-width: 600px;
   gap: 2rem;
+  margin-bottom: 1.5rem; /* space between content and copyright */
 }
 
 .footer-content h3 {
@@ -306,6 +295,15 @@
 .social-links a:hover {
   color: #0a8e63;
 }
+
+.footer-copyright p {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  margin: 0;
+  user-select: none;
+  text-align: center;
+}
+
   </style>
 
   <!-- Google Fonts -->
@@ -380,8 +378,14 @@
         </div>
       </div>
     </div>
+
+    <!-- Copyright below the footer-content -->
+    <div class="footer-copyright">
+      <p>© 2025 Jillian Ireland. All rights reserved.</p>
+    </div>
   </div>
 </footer>
+
   
   <script>
     const phrases = [
