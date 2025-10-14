@@ -290,7 +290,7 @@
 </section>
 
 
- <main role="main" aria-label="Experience content" style="padding: 6rem 2rem 4rem; min-height: calc(100vh - 120px); background-color: #132060; color: #fff; text-align: center;">
+ <main role="main" aria-label="Experience content" style="padding: 3rem 2rem 4rem; min-height: calc(100vh - 120px); background-color: #132060; color: #fff; text-align: center;">
   <section aria-labelledby="experience-title" style="max-width: 1100px; margin: 0 auto; padding: 2rem; text-align: left;">
     <h2 id="experience-title"
       style="
@@ -526,75 +526,82 @@
 <li>Collaborated with IT staff to streamline ticketing workflows and improve response times by 20%</li>
     </ul>
   </div>
-
 </div>
-
-<!-- Skills Section -->
-
-<section aria-labelledby="skills-title" style="max-width: 1100px; margin: 0 auto; padding: 2rem;">
-  <h2 id="skills-title"
-    style="
-      font-weight: 700;
-      font-size: 2.5rem;
-      color: #ffffff;
+    <!--SKILLS-->  
+  <div style="width: 100%; margin-top: 3rem;">
+    <h2 id="affiliations-title" 
+      style="
+      font-weight: 700; 
+      font-size: 2rem; 
+      color: #ffffff; 
       margin-top: 3rem;
-      margin-bottom: 2rem;
-      border: 3px solid #0a8e63;
-      padding: 0.75rem 2rem;
-      border-radius: 12px 12px 0 0;
+      margin-bottom: 1.5rem; 
+      border: 3px solid #0a8e63; 
+      padding: 0.75rem 2rem; /*     increased horizontal padding */
+      border-radius: 10px 10px 0 0; /* optional: rounded corners on top only */
+      width: 100%;
+      box-sizing: border-box;
       text-align: center;
       background-color: #0a8e63;
       box-shadow: 0 4px 10px rgba(10, 142, 99, 0.6);
-    ">
+      ">
     Skills
-  </h2>
+    </h2>
+    
+     
+    <!-- Skills Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+      
+      <!-- Data Analytics Tools -->
+      <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.1);">
+        <h3 style="font-size: 1.25rem; color: #0a8e63; font-weight: 700; margin-bottom: 1.25rem;">Data Analytics Tools</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Power BI</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Tableau</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Excel</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Power Query</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Data Visualization</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Data Cleaning</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">SQL</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Python</span>
+        </div>
+      </div>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <!-- Cybersecurity & Monitoring -->
+      <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.1);">
+        <h3 style="font-size: 1.25rem; color: #0a8e63; font-weight: 700; margin-bottom: 1.25rem;">Cybersecurity & Monitoring</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Azure Sentinel</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Cisco Firepower</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Splunk</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">KQL</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Threat Correlation</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Geospatial Analysis</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">CVEs</span>
+        </div>
+      </div>
 
-    <!-- Skill Category Card -->
-    <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.15);">
-      <h3 style="color: #0a8e63; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 700;">Programming & Scripting</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Python</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">SQL</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">HTML</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">CSS</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">JavaScript</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Java</span>
+      <!-- Technical & Core Skills -->
+      <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.1);">
+        <h3 style="font-size: 1.25rem; color: #0a8e63; font-weight: 700; margin-bottom: 1.25rem;">Technical & Core Skills</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Data Storytelling</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Critical Thinking</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Communication</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Project Management</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Team Collaboration</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">GitHub</span>
+          <span style="background-color: #eafaf4; border: 2px solid #0a8e63; color: #0a8e63; font-weight: 600; padding: 0.6rem 1rem; border-radius: 999px;">Agile Workflows</span>
+        </div>
       </div>
     </div>
-
-    <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.15);">
-      <h3 style="color: #0a8e63; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 700;">Tools & Platforms</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Microsoft Copilot</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Microsoft Excel</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Tableau</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Linux</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">WordPress</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">WIX</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Mendix</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Anaconda</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Cisco Firepower</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Azure Sentinel</span>
-      </div>
-    </div>
-
-    <div style="background-color: #fefeff; border-radius: 12px; padding: 2rem; border: 2px solid #0a8e63; box-shadow: 0 6px 20px rgba(10, 142, 99, 0.15);">
-      <h3 style="color: #0a8e63; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 700;">Leadership & Soft Skills</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Team Leadership</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Community Engagement</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Project Management</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Cross-functional Collaboration</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Technical Documentation</span>
-        <span style="background: #0a8e63; color: white; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 1rem;">Office Management</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
+
+      
+      
+      </main>
 
 
   <!--Footer-->
