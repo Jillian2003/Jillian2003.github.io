@@ -603,39 +603,44 @@
       
       </main>
 
-
-  <!--Footer-->
- <footer class="footer-section">
-  <div class="footer-video-container" aria-hidden="true">
-    <video autoplay muted loop playsinline>
+<!--Footer-->
+<footer class="footer-section" style="position: relative; overflow: hidden; color: #fff; text-align: center;">
+  <div class="footer-video-container" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
       <source src="BackgroundVideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
 
-  <div class="footer-overlay">
-    <div class="footer-content">
-      <div class="contact-info">
-        <h3>Email</h3>
-        <p>jireland1@stetson.edu</p>
+  <div class="footer-overlay" style="background-color: rgba(10, 142, 99, 0.8); padding: 3rem 1rem;">
+    <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 3rem; max-width: 900px; margin: 0 auto;">
+      
+      <div class="contact-info" style="text-align: left;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Email</h3>
+        <p style="font-size: 1.1rem;">jireland1@stetson.edu</p>
       </div>
-      <div class="social-links">
-        <h3>Follow</h3>
-        <div>
-          <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-          <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
-          <a href="#" aria-label="Personal website"><i class="fas fa-globe"></i></a>
+
+      <div class="social-links" style="text-align: left;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Follow</h3>
+        <div style="display: flex; gap: 1.5rem; font-size: 1.8rem;">
+          <a href="https://www.linkedin.com/in/jillianireland09/" target="_blank" aria-label="LinkedIn profile" style="color: #fff; transition: color 0.3s;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Jillian2003" target="_blank" aria-label="GitHub profile" style="color: #fff; transition: color 0.3s;">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://irelandportfolios.com" target="_blank" aria-label="Personal website" style="color: #fff; transition: color 0.3s;">
+            <i class="fas fa-globe"></i>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Copyright below the footer-content -->
-    <div class="footer-copyright">
+    <div class="footer-copyright" style="margin-top: 3rem; font-size: 0.95rem;">
       <p>© 2025 Jillian Ireland. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
