@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - Jillian Ireland Portfolio</title>
+  <title>Education - Jillian Ireland Portfolio</title>
   <style>
     /* Reset */
     * {
@@ -22,7 +22,7 @@
 
     /* Header */
     header {
-      position: fixed;
+      position: relative;
       top: 0; left: 0; right: 0;
       display: flex;
       align-items: center;
@@ -34,46 +34,57 @@
       color: #d1d1d1;
     }
 
-    .logo-container {
-      width: 40px;
-      height: 40px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: float 4s ease-in-out infinite;
-      color: #2c3e50;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+  .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* space between circle and text */
+  margin-bottom: 1rem
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
+.logo-container {
+  width: 80px;   /* larger circle */
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    .initial-J {
-      font-size: 20px;
-      margin-bottom: -4px;
-      line-height: 1;
-    }
+.initial-J,
+.initial-I {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
 
-    .initial-I {
-      font-size: 12px;
-      line-height: 1;
-    }
+.initial-J {
+  font-size: 30px;   /* bigger J */
+  margin-bottom: -4px;
+}
 
-    .logo-text {
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-align: center;
-      color: #d1d1d1;
-      margin-left: 0.5rem;
-    }
+.initial-I {
+  font-size: 22px;   /* bigger I */
+}
 
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f9f3;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
     nav {
       background-color: #f0f9f3;
       border-radius: 8px;
@@ -104,6 +115,7 @@
 
     /* Main body */
     main {
+      padding-top: 6rem;
       padding: 6rem 2rem 4rem; /* add padding top to avoid overlap with fixed header */
       min-height: calc(100vh - 120px); /* leave space for footer */
       background-color: #132060; /* Slightly lighter blue */
@@ -184,66 +196,225 @@
   text-align: center;
 }
 
+  .wave-banner {
+  position: relative;
+  background-color: #0a8e63; /* The blue background */
+  background-image: url('logos/StetsonImage.jpg');
+  color: white;
+  overflow: hidden;
+  padding: 6rem 1rem 6rem; /* bottom padding so text is away from wave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.wave-content {
+  max-width: 900px;
+  width: 90%;
+  background-color: rgba(14,17,76,0.7);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(14,17,76,0.7);
+  z-index: 2;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.wave-content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* The wavy SVG at the bottom */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 1;
+  display: block;
+}
+
+/* Responsive font size */
+@media (max-width: 600px) {
+  .wave-content h1 {
+    font-size: 2rem;
+  }
+  .wave-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Project Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .project-card:hover,
+    .project-card:focus {
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+      outline: none;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background-color: rgba(10, 142, 99, 0.85); /* Your green */
+      color: #fff;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      user-select: none;
+    }
+
+    
   </style>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLp3T6Uq9Cq7E9K2j3P7FpPqPj9M8pPj6V7yYp1F6c5a5Zc7u7t0u7s5Q6Bw6p6o9E9zYk3t7T5w4j6s5zP7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
   <header>
-    <div class="logo" aria-label="Jillian Ireland logo" style="display: flex; align-items: center;">
-      <div class="logo-container" aria-hidden="true">
-        <div class="initial-J">J</div>
-        <div class="initial-I">I</div>
-      </div>
-      <div class="logo-text">Jillian Ireland</div>
-    </div>
+    <div class="logo" aria-label="Jillian Ireland logo">
+  <div class="logo-container" aria-hidden="true">
+    <div class="initial-J">J</div>
+    <div class="initial-I">I</div>
+  </div>
+  <div class="logo-text">Jillian Ireland</div>
+</div>
 
     <nav role="navigation" aria-label="Primary Navigation">
       <a href="index.html">Home</a>
       <a href="education.html">Education</a>
-      <a href="experience.html">Experience</a>
-      <a href="projects.html"class="active" aria-current="page">Projects</a>
+     <a href="projects.html">Experience</a>
+      <a href="experience.html" class="active" aria-current="page">Projects</a>
     </nav>
   </header>
 
-  <main role="main" aria-label="Education content">
-    <!-- Content will go here -->
-    <p>This is the Projects page content area.</p>
+ <section class="wave-banner" aria-label="Experience and Skills banner">
+  <div class="wave-content">
+    <h1>Projects</h1>
+  </div>
+  <svg class="wave-divider" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path fill="#0E114C" d="M0,100 C480,200 960,0 1440,100 L1440,150 L0,150 Z"></path>
+  </svg>
+</section>
+
+
+  <!-- Main Content -->
+  <main role="main" aria-label="Experience content">
+    <div class="project-grid" role="list" aria-label="Portfolio projects">
+      <a href="project1.html" class="project-card" role="listitem" aria-label="Project AI Chatbot">
+        <img src="images/project1.jpg" alt="Screenshot of AI Chatbot project" />
+        <div class="card-title">AI Chatbot</div>
+      </a>
+      <a href="project2.html" class="project-card" role="listitem" aria-label="Project Weather App">
+        <img src="images/project2.jpg" alt="Screenshot of Weather App project" />
+        <div class="card-title">Weather App</div>
+      </a>
+      <a href="project3.html" class="project-card" role="listitem" aria-label="Project Portfolio Site">
+        <img src="images/project3.jpg" alt="Screenshot of Portfolio Site project" />
+        <div class="card-title">Portfolio Site</div>
+      </a>
+      <a href="project4.html" class="project-card" role="listitem" aria-label="Project UX Redesign">
+        <img src="images/project4.jpg" alt="Screenshot of UX Redesign project" />
+        <div class="card-title">UX Redesign</div>
+      </a>
+      <a href="project5.html" class="project-card" role="listitem" aria-label="Project Data Dashboard">
+        <img src="images/project5.jpg" alt="Screenshot of Data Dashboard project" />
+        <div class="card-title">Data Dashboard</div>
+      </a>
+      <a href="project6.html" class="project-card" role="listitem" aria-label="Project Mobile Game">
+        <img src="images/project6.jpg" alt="Screenshot of Mobile Game project" />
+        <div class="card-title">Mobile Game</div>
+      </a>
+    </div>
   </main>
 
- <footer class="footer-section">
-  <div class="footer-video-container" aria-hidden="true">
-    <video autoplay muted loop playsinline>
+<!--Footer-->
+<footer class="footer-section" style="position: relative; overflow: hidden; color: #fff; text-align: center;">
+  <div class="footer-video-container" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
       <source src="BackgroundVideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
 
-  <div class="footer-overlay">
-    <div class="footer-content">
-      <div class="contact-info">
-        <h3>Email</h3>
-        <p>jireland1@stetson.edu</p>
+  <div class="footer-overlay" style="background-color: rgba(14, 17, 76, 0.5); padding: 3rem 1rem;">
+    <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 3rem; max-width: 900px; margin: 0 auto;">
+      
+      <div class="contact-info" style="text-align: left;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Email</h3>
+        <p style="font-size: 1.1rem;">jireland1@stetson.edu</p>
       </div>
-      <div class="social-links">
-        <h3>Follow</h3>
-        <div>
-          <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-          <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
-          <a href="#" aria-label="Personal website"><i class="fas fa-globe"></i></a>
+
+      <div class="social-links" style="text-align: left;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Follow</h3>
+        <div style="display: flex; gap: 1.5rem; font-size: 1.8rem;">
+          <a href="https://www.linkedin.com/in/jillianireland09/" target="_blank" aria-label="LinkedIn profile" style="color: #fff; transition: color 0.3s;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Jillian2003" target="_blank" aria-label="GitHub profile" style="color: #fff; transition: color 0.3s;">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://irelandportfolios.com" target="_blank" aria-label="Personal website" style="color: #fff; transition: color 0.3s;">
+            <i class="fas fa-globe"></i>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Copyright below the footer-content -->
-    <div class="footer-copyright">
+    <div class="footer-copyright" style="margin-top: 3rem; font-size: 0.95rem;">
       <p>© 2025 Jillian Ireland. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
-
 </body>
 </html>
+
